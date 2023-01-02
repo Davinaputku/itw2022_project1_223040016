@@ -9,18 +9,26 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Davinaputku</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#hobby">Hobby</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">
+            <h1>Davinaputku</h1>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#hobby">Hobby</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
     <section class="banner" id="home">
         <div class="container">
@@ -52,8 +60,11 @@
             <img src="img/me/inot.jpg" alt="ina">
             <div class="paragraf">
                 <h4>About Me</h4>
-                <p>Haloo semuanya!! perkenalkan nama saya Davina Putri Kusuma, kalian bisa panggil saya ina. Saya Lahir pada tanggal 24 Agustus 2004. Saya berasal dari Palembang, tetapi sekarang saya tinggal di Bandung. Saya anak ketiga dari tiga bersaudara.
-                    Saya lulusan SMA Pasundan 2 Bandung dan sekarang saya adalah Mahasiswi di Universitas Pasundan Bandung angkatan 2022 jurusan Teknik Informatika.
+                <p>Haloo semuanya!! perkenalkan nama saya Davina Putri Kusuma, kalian bisa panggil saya ina.
+                    Saya Lahir pada tanggal 24 Agustus 2004. Saya berasal dari Palembang, tetapi sekarang saya tinggal di Bandung. 
+                    Saya anak ketiga dari tiga bersaudara.
+                    Saya lulusan SMA Pasundan 2 Bandung dan sekarang saya adalah Mahasiswi di Universitas Pasundan Bandung 
+                    angkatan 2022 jurusan Teknik Informatika.
                 </p>
             </div>
         </div>
@@ -151,5 +162,7 @@
             .catch(error => console.error('Error!', error.message))
         })
       </script>
+      
+      <script type="text/javascript" src="js/BebasNeue.woff"></script>
 </body>
 </html>

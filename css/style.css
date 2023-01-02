@@ -3,51 +3,117 @@ html {
 }
 
 body {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    overflow-x: hidden;
 }
 
-header {
-    position: fixed;
+nav {
+    display: flex;
     background-color: lavender;
-    padding: 0 100px;
-    width: 100%;
-    box-sizing: border-box;
+    justify-content: space-around;
+    color: hotpink;
+    height: 70px;
+    align-items: center;
     z-index: 9999;
 }
-
-header h1 {
-    float: left;
-    color: hotpink;
-    height: 60px;
-    line-height: 60px;
-    font-size: 24px;
+  
+nav .logo {
+    letter-spacing: 3px;
+    font-size: 25px;
 }
   
-header nav {
-    float: right;
-}
-  
-header nav ul {
+nav ul {
     display: flex;
-}
-  
-header nav ul li {
     list-style: none;
+    width: 40%;
+    justify-content: space-between;
 }
   
-header nav ul li a {
-    color: mediumorchid;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 20px;
-    display: block;
+nav ul li a {
+    color: mediumpurple;
+    text-decoration: none;
+    font-size: 1em;
+}
+  
+nav ul li a:hover {
+    color: hotpink;
 }
 
-header nav ul li a:hover {
-    color: hotpink;
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -10px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
     background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: mediumpurple;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: mediumaquamarine;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: lavender;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 a {
@@ -83,7 +149,7 @@ section {
 }
 
 .foto img {
-    height: 500px;
+    height: 450px;
     right: 100px;
     left: 70%;
     bottom: 0;
@@ -107,6 +173,7 @@ section {
 
 .banner-left {
     padding-left: 24px;
+    z-index: -9999;
 }
 
 .social-icon {
@@ -136,6 +203,7 @@ section {
 .tentangku .image .paragraf p {
     font-size: 25px;
     display: block;
+    padding-top: 30px;
 }
 
 .tentangku .image {
@@ -155,12 +223,23 @@ section h4 {
     margin: 20px;
     position: relative;
     font-size: 40px;
-    
+}
+
+section h4::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    bottom: -1px;
+    background-color: hotpink;
+    left: calc(50% - 60px);
 }
 
 section p {
     font-size: 20px;
     padding: 0 25px;
+
 }
 
 .education {
@@ -169,8 +248,8 @@ section p {
 
 .education .education-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
     margin-top: 50px;
 }
 
@@ -194,13 +273,13 @@ section p {
 }
 
 .education .education-list .pendidikan a {
-    font-size: 12px;
+    font-size: 20px;
     margin-top: 20px;
     display: inline-block;
 }
 
 .education .education-list .pendidikan a:hover {
-    font-size: medium;
+    font-size: 25px;
     transition: 0.5s;
 }
 
