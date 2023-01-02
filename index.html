@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davinaputku</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Davinaputku</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#hobby">Hobby</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="container">
+            <div class="banner-left">
+                <h2>
+                    Haii, I'm 
+                    <span>Davina</span>
+                </h2>
+                <h3>Mahasiswa Teknik Informatika 2022</h3>
+            </div>
+
+            <div class="foto">
+                <img src="img/me/davdav.png" alt="davina" class="davina">
+            </div>
+
+            <div class="social-icon">
+                <a href="https://wa.me/qr/6UYD2RZQSWKSG1">
+                    <img src="img/social media/whatsapp.png" alt="whatsapp">
+                </a>
+                <a href="https://instagram.com/davinaputku?igshid=MDM4ZDc5MmU=">
+                    <img src="img/social media/instagram.png" alt="instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="tentangku">
+        <div class="image">
+            <img src="img/me/inot.jpg" alt="ina">
+            <div class="paragraf">
+                <h4>About Me</h4>
+                <p>Haloo semuanya!! perkenalkan nama saya Davina Putri Kusuma, kalian bisa panggil saya ina. Saya Lahir pada tanggal 24 Agustus 2004. Saya berasal dari Palembang, tetapi sekarang saya tinggal di Bandung. Saya anak ketiga dari tiga bersaudara.
+                    Saya lulusan SMA Pasundan 2 Bandung dan sekarang saya adalah Mahasiswi di Universitas Pasundan Bandung angkatan 2022 jurusan Teknik Informatika.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <div class="container">
+            <h4>Education</h4>
+            <div class="education-list">
+                <div class="pendidikan">
+                    <img src="img/pendidikan/sd.jpg" alt="sd">
+                    <h5>SDN 212 Bandung Harapan</h5>
+                    <a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/807E7C05-2DF5-E011-8041-71904DEDA8EB" target="_blank">Learn more</a>
+                </div>
+                <div class="pendidikan">
+                    <img src="img/pendidikan/smp.jpg" alt="sd">
+                    <h5>SMPN 29 Bandung</h5>
+                    <a href="https://smpn29-bdg.sch.id/" target="_blank">Learn more</a>
+                </div>
+                <div class="pendidikan">
+                    <img src="img/pendidikan/sma.jpg" alt="sd">
+                    <h5>SMA Pasundan 2 Bandung</h5>
+                    <a href="https://www.sma-pasundan2-bdg.sch.id/" target="_blank">Learn more</a>
+                </div>
+                <div class="pendidikan">
+                    <img src="img/pendidikan/kuliah.jpg" alt="sd">
+                    <h5>Universitasi Pasundan</h5>
+                    <a href="https://www.unpas.ac.id/" target="_blank">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hobby" id="hobby">
+        <div class="container">
+            <h4>My Hobby</h4>
+            <div class="hobby-content">
+                <div class="card">
+                    <div class="box">
+                        <img src="img/hobby/musik.png" alt="musik">
+                        <div class="text">Mendenggarkan Musik</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/hobby/komik.png" alt="Komik">
+                        <div class="text">Membaca Komik</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="img/hobby/game.png" alt="game">
+                        <div class="text">Main Game</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h4>Contact Me</h4>
+            <div class="contact">
+                <form method="post" name="kontak">
+                    <p>Nama</p>
+                    <input type="text" name="name" placeholder="Nama Anda">
+                    <p>Email (Wajib Diisi)</p>
+                    <input type="email" name="email" id="email" placeholder="Masukan Email Anda">
+                    <p>Pesan</p>
+                    <textarea name="pesan" placeholder="Ketik Pesan Disini"></textarea>
+                    <br />
+                    <input type="submit" value="kirim" class="contact-submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copy">
+                Copyright 2022 - Davina Putri Kusuma
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoL3jmV5JyE_v1OQFhm5kqBKK23mdcu1WCDM5dK1v6mAQjUfqqaMa-tGUbQDwtVC_V/exec'
+        const form = document.forms['kontak']
+        const btnkirim = document.querySelector (".contact-submit")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {form.reset(); console.log('Success!', response);})
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
